@@ -27,6 +27,17 @@ cards, and a battle between two stores. Not everything is implemented for this
 yet, but once you fix it up, you should be able to see a full fight when you
 `cargo run`!
 
+Also note, the tests for this lab are more strict than last time. `cargo check`
+gives you some linting recommendations, but `cargo clippy` gives far more. To
+make sure that you have `clippy`, you can run this in your terminal:
+
+```bash
+rustup component add clippy
+```
+
+Make sure that `cargo clippy` doesn't show any warnings before you commit your
+code!
+
 ### (info) Module time
 
 The code for this lab is split up into several modules. We have the `main.rs`

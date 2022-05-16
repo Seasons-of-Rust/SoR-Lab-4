@@ -86,9 +86,9 @@ fn main() {
     thread::sleep(time::Duration::from_millis(300));
 
     match fight_result {
-        FightResult::Win => println!("{}", "SHOP 1 WINS!"),
-        FightResult::Loss => println!("{}", "SHOP 2 WINS!"),
-        FightResult::Tie => println!("{}", "IT'S A TIE!"),
+        FightResult::Win => println!("SHOP 1 WINS!"),
+        FightResult::Loss => println!("SHOP 2 WINS!"),
+        FightResult::Tie => println!("IT'S A TIE!"),
         _ => unreachable!(),
     }
 }
