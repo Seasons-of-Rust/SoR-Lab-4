@@ -58,9 +58,9 @@ structs.
 
 ### (impl) The fight method
 
-Next, we're going to set up fights between `Card`s. This will be a method on the
-`Card` struct. It will take in an instance of a card with `&self`, and another
-instance as `other`. Here are the rules of a fight:
+Next, we're going to set up fights between `Card`s. This will be a method called
+`fight` on the `Card` struct. It will take in an instance of a card with
+`&self`, and another instance as `other`. Here are the rules of a fight:
 
 - If both cards deal enough damage to kill one another, return a tie
 - If this card deals enough damage to kill the other card, return a win
@@ -123,9 +123,11 @@ shop. The shop that wins the most fights wins the battle. If both shops win the
 same number of battles, then the battle is a tie.
 
 For this, we'll use the same `FightResult` enum as we did with the `Card`
-method. Remember, when you're implementing this, you can use the `print_fight`
-method instead of `fight` if you want to see a log of the fight. Feel free to
-change this print method if you like!
+method. You'll need to work on the `fight_store` method on the `Shop` struct.
+
+Remember, when you're implementing this, you can use the `print_fight` method
+instead of `fight` if you want to see a log of the fight. Feel free to change
+this print method if you like!
 
 ### (info) A bit on iterators
 
