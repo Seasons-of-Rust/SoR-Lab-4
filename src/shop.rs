@@ -1,3 +1,5 @@
+use std::fmt;
+
 use crate::{card::Card, FightResult};
 
 pub struct Shop {
@@ -25,5 +27,20 @@ impl Shop {
     /// FightResult::Tie if both stores win the same number of battles.
     pub fn fight_store(&self, other: &Shop) -> FightResult {
         todo!()
+    }
+}
+
+// Implement the Display trait for Shop so that it can be printed. Print the
+// shop's stats, including the most expensive card, the total damage, and the
+// total health.
+impl fmt::Display for Shop {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(
+            f,
+            "|Shop: {}/{}/{}|",
+            self.most_expensive(),
+            self.total_damage(),
+            self.total_health()
+        )
     }
 }
